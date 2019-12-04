@@ -11,8 +11,14 @@ This tool is a **Python** program that uses the **psycopg2** module to connect t
 
 ## Getting started
 you need to install:
+#### -Python3
+Download Python2 from [here](https://www.python.org/downloads/).
 #### -VirtualBox
+Download VirtualBox from [here](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1).
 #### -Vagrant
+download Vagrant from [here](https://www.vagrantup.com/).
+#### Get news sql script 
+Download news database script from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
 ## Running the Project:
 #### Navigate to the directory that containing the **vagrantfile**
@@ -22,20 +28,23 @@ you need to install:
 ##### 3-Install Postgres Database.
 ##### 4-Creating Database **news**.
 
-#### Run the following command to start the VM ssh into the vagrant box:
+### Steps:
+#### 1-Run the following command to start the VM ssh into the vagrant box:
 `vagrant up`
 
-#### Run the following command to ssh into the VM:
+#### 2-Run the following command to ssh into the VM:
 `vagrant ssh`
 
-#### After login to the VM, Extract  newsdata.zip
+#### 3-After login to the VM, Extract  newsdata.zip
 
-#### Run the following command to create tables and insert data into news database:
+#### 4-Run the following command to create tables and insert data into news database:
 `psql -d news -f newsdata.sql`
 
-#### Connect to the database and create the views where in **Views.txt**
+#### 5-Connect to the database and create the views where in **Views.txt**
+`psql news`
+Run Views creation , run them with the same sequnce.
 
-#### Run Python Program **loganalysis.py** and log analysis will be printed
-`python loganalysis.py`
+#### 6-Run Python Program **loganalysis.py** and log analysis will be printed
+`python2 loganalysis.py`
 
 
