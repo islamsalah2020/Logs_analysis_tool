@@ -36,6 +36,6 @@ you need to install:
 #### Connect to the database and create the views where in **Views.txt**
 
 #### Run Python Program **loganalysis.py** and log analysis will be printed
-python loganalysis.py
+`python loganalysis.py`
 
 
