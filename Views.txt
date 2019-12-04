@@ -1,0 +1,22 @@
+views 
+create view articles_view as 
+select author, count(*) as num
+from articles, log 
+where replace(path,'/article/','') = slug
+group by author;       
+
+create view daily_visits as
+select to_char(time, 'DD-MON-YYYY') as date, count(*) as total
+from log
+group by date;
+
+create view daily_error as
+select to_char(time, 'DD-MON-YYYY') as date, count(*) as error
+from log
+where status != '200 OK'
+group by date;
+
+create view error_rate as
+select daily_visits.date, round(100.00 * error / total, 2) as ratio
+from daily_visits , daily_error
+where daily_visits.date = daily_error.date;
