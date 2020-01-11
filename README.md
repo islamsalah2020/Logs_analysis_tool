@@ -11,7 +11,7 @@ This tool is a **Python** program that uses the **psycopg2** module to connect t
 
 ## Getting started
 you need to install:
-#### -Python3
+#### -Python
 Download Python2 from [here](https://www.python.org/downloads/).
 #### -VirtualBox
 Download VirtualBox from [here](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1).
@@ -21,30 +21,31 @@ download Vagrant from [here](https://www.vagrantup.com/).
 Download news database script from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
 ## Running the Project:
-#### Navigate to the directory that containing the **vagrantfile**
+Navigate to the directory that containing the **vagrantfile**
 -Vagrantfile containing:
-##### 1-Configuration of the VM.
-##### 2-Install Python
-##### 3-Install Postgres Database.
-##### 4-Creating Database **news**.
+1. Configuration of the VM.
+2. Install Python
+3. Install Postgres Database.
+4. Creating Database **news**.
 
 ### Steps:
-#### 1-Run the following command to start the VM ssh into the vagrant box:
-`vagrant up`
+1. Run the following command to start the VM ssh into the vagrant box:
+ - `vagrant up`
 
-#### 2-Run the following command to ssh into the VM:
-`vagrant ssh`
+2. Run the following command to ssh into the VM:
+ - `vagrant ssh`
 
-#### 3-After login to the VM, Extract  newsdata.zip
+3. After login to the VM, Extract  newsdata.zip
 
-#### 4-Run the following command to create tables and insert data into news database:
-`psql -d news -f newsdata.sql`
+4. Run the following command to create tables and insert data into news database:
+ - `psql -d news -f newsdata.sql`
 
-#### 5-Connect to the database and create the views where in **Views.txt**
-`psql news`
-Run Views creation , run them with the same sequnce.
+5. Connect to the database and create the views where in **Views.txt**
+ - `psql news`
 
-#### 6-Run Python Program **loganalysis.py** and log analysis will be printed
-`python2 loganalysis.py`
+6. Run Views creation , run them with the same sequnce.
+
+7. Run Python Program **loganalysis.py** and log analysis will be printed
+ - `python2 loganalysis.py`
 
 
